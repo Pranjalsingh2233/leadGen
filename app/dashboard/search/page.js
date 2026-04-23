@@ -1,24 +1,10 @@
-import { useState } from 'react';
+import { SearchForm } from "@/components/features/searchForm";
 
-export default function SearchPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // Perform search logic here
-  };
-
+export default function page() {
   return (
-    <div>
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button type="submit">Search</button>
-      </form>
+    <div className="text-center mt-20 ">
+      <h1 className="text-3xl font-semibold mb-10 text-black">Find leads your leads which match your criteria</h1>
+      <SearchForm />
     </div>
   );
 }
